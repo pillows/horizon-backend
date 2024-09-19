@@ -13,7 +13,7 @@ def create_event():
     new_event = Event(
         name=data['name'],
         description=data.get('description'),
-        start_date=datetime.fromisoformat(data['date']),
+        start_date=datetime.fromisoformat(data['start_date']),
         available_spots=data['available_spots']
     )
     db.session.add(new_event)
